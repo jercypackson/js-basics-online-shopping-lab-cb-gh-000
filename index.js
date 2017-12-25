@@ -53,7 +53,7 @@ function total() {
   var tot = 0;
   for (var i = 0; i < cart.length; i++) {
     var elem = cart[i];
-    tot += elem[Object.key(elem)];
+    tot += elem[Object.keys(elem)];
   }
   return tot;
 }
