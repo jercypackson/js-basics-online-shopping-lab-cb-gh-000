@@ -22,12 +22,31 @@ function viewCart() {
     console.log("Your shopping cart is empty.");
   } else {
     var rv = "In your cart, you have ";
-    for (var i = 0; i < cart.length; i++) {
-      var k = Object.keys(cart[i])[0];
-      rv += k + " at $" + cart[i][k] + ".";
+
+    //first one
+    rv += getString(0);
+
+    if (cart.length == 2){
+      rv += " and " + getString(1);
+    } else if (cart.length > 2){
+      for (var i = 1; i < cart.length; i++) {
+        rv += ", ";
+        
+        if (i === cart.length - 1){
+          rv += "and ";
+        }
+
+        rv += getString(i);
+      }
     }
-    console.log(rv);
+
+    console.log(rv + ".");
   }
+}
+
+function getString(i){
+  var k = Object.keys(cart[i])[0];
+  return k + " at $" + cart[i][k];
 }
 
 function total() {
