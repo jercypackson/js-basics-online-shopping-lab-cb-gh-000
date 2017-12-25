@@ -31,7 +31,7 @@ function viewCart() {
     } else if (cart.length > 2){
       for (var i = 1; i < cart.length; i++) {
         rv += ", ";
-        
+
         if (i === cart.length - 1){
           rv += "and ";
         }
@@ -50,7 +50,12 @@ function getString(i){
 }
 
 function total() {
-  // write your code here
+  var tot = 0;
+  for (var i = 0; i < cart.length; i++) {
+    var elem = cart[i];
+    tot += elem[Object.key(elem)];
+  }
+  return tot;
 }
 
 function removeFromCart(item) {
