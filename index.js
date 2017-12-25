@@ -16,8 +16,8 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  
-  
+
+
   var rv = "In your cart, you have ";
   for (var i = 0; i < cart.length; i++) {
     cart[i]
