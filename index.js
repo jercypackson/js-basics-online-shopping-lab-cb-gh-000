@@ -10,6 +10,7 @@ function setCart(c) {
 }
 
 function addToCart(item) {
+  cart[item] = Math.ceiling(Math.random()*100);
  // write your code here
 }
 
