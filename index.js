@@ -26,6 +26,7 @@ function viewCart() {
       var k = Object.keys(cart[i])[0];
       rv += k + " at $" + cart[i][k];
     }
+    console.log(rv);
   }
 }
 
