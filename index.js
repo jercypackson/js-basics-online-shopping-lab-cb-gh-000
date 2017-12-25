@@ -11,7 +11,8 @@ function setCart(c) {
 
 function addToCart(item) {
   cart[item] = Math.ceiling(Math.random()*100);
- // write your code here
+  console.log(`${item} has been added to your cart.`);
+  return cart;
 }
 
 function viewCart() {
